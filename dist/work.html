@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>View My Work</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172022121-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-172022121-2");
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> About Me </a>
+          </li>
+          <li class="nav-item current">
+            <a href="work.html" class="nav-link"> My Work </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> How To Reach Me </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="work">
+      <h1 class="lg-heading">
+        My
+        <span class="text-secondary">Work</span>
+      </h1>
+      <h2 class="sm-heading">Check out some of my projects...</h2>
+      <div class="projects">
+        <div class="item">
+          <a
+            href="https://search-in-moviehub.netlify.app/"
+            onclick="gtag('event', 'select_content', { 'content_type': 'SM-App-img' });"
+          >
+            <img src="img/projects/search-movie-react.png" alt="Project" />
+          </a>
+          <a
+            href="https://search-in-moviehub.netlify.app/"
+            class="btn-light"
+            onclick="gtag('event', 'select_content', { 'content_type': 'SM-App' });"
+          >
+            <i class="fas fa-eye"></i> Search Movie React App
+          </a>
+          <a
+            href="https://github.com/jsbucks/search-movie-app"
+            class="btn-dark"
+            onclick="gtag('event', 'select_content', { 'content_type': 'SM-App-Github' });"
+          >
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a
+            href="https://react-graphql-app.netlify.app/"
+            onclick="gtag('event', 'select_content', { 'content_type': 'react-graphql-app-img' });"
+          >
+            <img src="img/projects/react-graphql-app.png" alt="Project" />
+          </a>
+          <a
+            href="https://react-graphql-app.netlify.app/"
+            class="btn-light"
+            onclick="gtag('event', 'select_content', { 'content_type': 'RG-App' });"
+          >
+            <i class="fas fa-eye"></i> React Graphql App
+          </a>
+          <a
+            href="https://github.com/jsbucks/react-graphql-app"
+            class="btn-dark"
+          >
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a
+            href="https://react-typescript-quiz.netlify.app/"
+            onclick="gtag('event', 'select_content', { 'content_type': 'react-typescript-app-img' });"
+          >
+            <img src="img/projects/react-typescript-app.png" alt="Project" />
+          </a>
+          <a
+            href="https://react-typescript-quiz.netlify.app"
+            class="btn-light"
+            onclick="gtag('event', 'select_content', { 'content_type': 'RT-App' });"
+          >
+            <i class="fas fa-eye"></i> React Typescript Quiz App
+          </a>
+          <a
+            href="https://github.com/jsbucks/react-typescript-quiz"
+            class="btn-dark"
+          >
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a
+            href="https://codesandbox.io/s/github/mjweb2267/Todo-App"
+            onclick="gtag('event', 'select_content', { 'content_type': 'Todo-App-img' });"
+          >
+            <img src="img/projects/github.jpeg" alt="Project" />
+          </a>
+          <a
+            href="https://codesandbox.io/s/github/mjweb2267/Todo-App"
+            class="btn-light"
+            onclick="gtag('event', 'select_content', { 'content_type': 'Todo-App' });"
+          >
+            <i class="fas fa-eye"></i> Todo App
+          </a>
+          <a
+            href="https://github.com/jsbucks/Todo-App"
+            class="btn-dark"
+            onclick="gtag('event', 'select_content', { 'content_type': 'Todo-App-Github' });"
+          >
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+        <div class="item">
+          <a
+            href="https://github.com/jsbucks/React-Webpack4-Babel7"
+            onclick="gtag('event', 'select_content', { 'content_type': 'React-Webpack4-Babel7' });"
+          >
+            <img src="img/projects/github.jpeg" alt="Project" />
+          </a>
+          <a
+            href="https://github.com/jsbucks/React-Webpack4-Babel7"
+            class="btn-dark"
+          >
+            <i class="fab fa-github"></i> React-Webpack4-Babel7
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer id="main-footer">Copyright &copy; 2022</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
