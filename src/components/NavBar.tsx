@@ -28,25 +28,39 @@ export default function NavBar() {
   const toggleDrawer = () => setMobileOpen((prev) => !prev);
 
   const drawer = (
-    <Box sx={{ textAlign: 'center', py: 2 }}>
-      <Typography variant="h6" sx={{ fontWeight: 700 }}>
-        Jigish Modi
-      </Typography>
-      <Divider sx={{ my: 2 }} />
-      <List>
+    <Box sx={{ width: 250, textAlign: 'center', py: 3, px: 2 }}>
+      <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Typography variant="h6" sx={{ fontWeight: 700, mb: 2, cursor: 'pointer' }} onClick={toggleDrawer}>
+          Jigish Modi
+        </Typography>
+      </Link>
+      <Divider sx={{ mb: 2 }} />
+      <List sx={{ px: 1 }}>
         {navItems.map((item) => (
-          <ListItem key={item.href} disablePadding>
-            <Button
-              component={Link}
-              href={item.href}
-              onClick={toggleDrawer}
-              sx={{ my: 1, width: '100%' }}
-              variant="text"
-            >
-              {item.label}
-            </Button>
+          <ListItem key={item.href} disablePadding sx={{ mb: 1 }}>
+            <Link href={item.href} passHref style={{ width: '100%', textDecoration: 'none' }}>
+              <Button
+                onClick={toggleDrawer}
+                sx={{ width: '100%', py: 1.5, justifyContent: 'center' }}
+                variant="text"
+              >
+                {item.label}
+              </Button>
+            </Link>
           </ListItem>
         ))}
+        <ListItem disablePadding sx={{ mt: 2 }}>
+          <Link href="/resume.pdf" passHref style={{ width: '100%', textDecoration: 'none' }}>
+            <Button
+              onClick={toggleDrawer}
+              sx={{ width: '100%', py: 1.5 }}
+              variant="contained"
+              color="primary"
+            >
+              Résumé
+            </Button>
+          </Link>
+        </ListItem>
       </List>
     </Box>
   );
@@ -56,22 +70,24 @@ export default function NavBar() {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ py: 1 }}>
           <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 700 }}>
-            <Link href="/">Jigish Modi</Link>
+            <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>Jigish Modi</Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
             {navItems.map((item) => (
-              <Button key={item.href} href={item.href} component={Link} variant="text" color="inherit">
-                {item.label}
-              </Button>
+              <Link key={item.href} href={item.href} passHref style={{ textDecoration: 'none' }}>
+                <Button variant="text" color="inherit">
+                  {item.label}
+                </Button>
+              </Link>
             ))}
-            <Button
-              href="/resume.pdf"
-              component={Link}
-              variant="contained"
-              color="primary"
-            >
-              Résumé
-            </Button>
+            <Link href="/resume.pdf" passHref style={{ textDecoration: 'none' }}>
+              <Button
+                variant="contained"
+                color="primary"
+              >
+                Résumé
+              </Button>
+            </Link>
           </Box>
           <IconButton
             color="inherit"

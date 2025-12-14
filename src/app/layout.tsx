@@ -3,8 +3,8 @@ import ThemeRegistry from '@/components/ThemeRegistry';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import '@/app/globals.css';
-import '@fontsource/inter/variable.css';
-import '@fontsource/space-grotesk/variable.css';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
 import { Box, Container } from '@mui/material';
 
 export const metadata: Metadata = {
