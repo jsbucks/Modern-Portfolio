@@ -31,3 +31,32 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+// Track outbound clicks in GA4 (skip inline gtag handlers).
+document.addEventListener('click', event => {
+  const link = event.target.closest('a');
+  if (!link) {
+    return;
+  }
+
+  const href = link.getAttribute('href') || '';
+  if (
+    !href.startsWith('http://') &&
+    !href.startsWith('https://') &&
+    !href.startsWith('mailto:') &&
+    !href.startsWith('tel:')
+  ) {
+    return;
+  }
+
+  if (typeof window.gtag === 'function') {
+    const linkText = (link.textContent || '').trim();
+    const eventName = link.dataset.gaEvent || 'outbound_click';
+    const label = link.dataset.gaLabel;
+    window.gtag('event', eventName, {
+      link_url: href,
+      link_text: linkText || undefined,
+      link_label: label || undefined
+    });
+  }
+});
