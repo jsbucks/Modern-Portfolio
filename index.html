@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,12 +13,40 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <title>Welcome To My Portfolio</title>
+    <meta
+      name="description"
+      content="Senior Front End Developer portfolio of Jigish Modi featuring experience, projects, and contact links."
+    />
+    <link rel="canonical" href="https://jigishmodi.com/" />
+    <meta property="og:title" content="Jigish Modi | Senior Front End Developer" />
+    <meta
+      property="og:description"
+      content="Explore projects, experience, and contact details for Jigish Modi."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jigishmodi.com/" />
+    <meta
+      property="og:image"
+      content="https://jigishmodi.com/img/profilePic.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Jigish Modi | Senior Front End Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore projects, experience, and contact details for Jigish Modi."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jigishmodi.com/img/profilePic.png"
+    />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-172022121-2"
+      src="https://www.googletagmanager.com/gtag/js?id=G-R21L30TVXX"
     ></script>
-    
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -26,7 +54,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "UA-172022121-2");
+      gtag("config", "G-R21L30TVXX");
     </script>
   </head>
 
@@ -64,17 +92,19 @@
         Jigish
         <span class="text-secondary">Modi</span>
       </h1>
-      <h2 class="sm-heading">Front End Developer, Programmer</h2>
+      <h2 class="sm-heading">Senior Front End Developer</h2>
       <div class="icons">
         <a
           href="https://www.linkedin.com/in/jmweb"
-          onclick="gtag('event', 'select_content', { 'content_type': 'Linkedin-Clicked' });"
+          data-ga-event="linkedin_click"
+          data-ga-label="home"
         >
           <i class="fab fa-linkedin fa-2x"></i>
         </a>
         <a
           href="https://www.github.com/jmstax"
-          onclick="gtag('event', 'select_content', { 'content_type': 'Github-Clicked' });"
+          data-ga-event="github_click"
+          data-ga-label="home"
         >
           <i class="fab fa-github fa-2x"></i>
         </a>
